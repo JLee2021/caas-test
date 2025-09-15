@@ -61,13 +61,13 @@ docker run -p 8080:8080 caas-test-app
 gcloud auth configure-docker us-central1-docker.pkg.dev
 
 # Build and tag the image
-docker build -t us-central1-docker.pkg.dev/YOUR-PROJECT-ID/YOUR-REPO-NAME/caas-test-app:latest .
+docker build -t us-central1-docker.pkg.dev/caas-test-project/caas-test-repo/caas-test-app:latest .
 
 # Push to Artifact Registry
-docker push us-central1-docker.pkg.dev/YOUR-PROJECT-ID/YOUR-REPO-NAME/caas-test-app:latest
+docker push us-central1-docker.pkg.dev/caas-test-project/caas-test-repo/caas-test-app:latest
 ```
 
-**Note**: Replace `YOUR-PROJECT-ID` and `YOUR-REPO-NAME` with your actual Google Cloud project ID and Artifact Registry repository name.
+**Note**: This example uses `caas-test-project` as the project ID and `caas-test-repo` as the repository name. Replace these with your actual Google Cloud project ID and Artifact Registry repository name if different.
 
 ## Kubernetes Deployment
 
@@ -77,9 +77,9 @@ docker push us-central1-docker.pkg.dev/YOUR-PROJECT-ID/YOUR-REPO-NAME/caas-test-
 
 ### Deploy to Kubernetes
 ```bash
-# Update the image path in deployment.yaml
-# Replace the placeholder with your actual Artifact Registry path:
-# us-central1-docker.pkg.dev/YOUR-PROJECT-ID/YOUR-REPO-NAME/caas-test-app:latest
+# The image path in deployment.yaml has been configured to use:
+# us-central1-docker.pkg.dev/caas-test-project/caas-test-repo/caas-test-app:latest
+# Update this if you're using different project ID or repository name
 
 # Apply the deployment
 kubectl apply -f deployment.yaml

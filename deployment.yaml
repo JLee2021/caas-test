@@ -20,9 +20,9 @@ spec:
     spec:
       containers:
       - name: caas-test-app
-        # TODO: Replace with actual Google Artifact Registry path
-        # Format: us-central1-docker.pkg.dev/YOUR-PROJECT-ID/YOUR-REPO-NAME/caas-test-app:latest
-        image: "us-central1-docker.pkg.dev/YOUR-PROJECT-ID/YOUR-REPO-NAME/caas-test-app:latest"
+        # Google Artifact Registry path
+        # Format: us-central1-docker.pkg.dev/PROJECT-ID/REPO-NAME/caas-test-app:latest
+        image: "us-central1-docker.pkg.dev/caas-test-project/caas-test-repo/caas-test-app:latest"
         ports:
         - containerPort: 8080
           name: http
