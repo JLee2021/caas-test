@@ -11,6 +11,7 @@
 
 # production
 /dist
+/build
 
 # misc
 .DS_Store
@@ -19,9 +20,42 @@
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
+# IDE files
 .vscode
+.idea
+*.swp
+*.swo
+
+# environment variables
 .env
+.env.*
+!.env.development
+!.env.test
+
+# OS generated files
+Thumbs.db
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+/tmp
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
